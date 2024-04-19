@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	parser := models.NewParser()
-	go parser.FetchLatestTransactions()
+	parser := models.NewParser()        // initiate the parser
+	go parser.FetchLatestTransactions() // fire up the observer
 
-	controller := controller.NewController(parser)
+	controller := controller.NewController(parser) // pass the parser to the controller
 
 	http.HandleFunc("/block", controller.GetLatestBlockNumber)
 	http.HandleFunc("/subscribe", controller.SubscribeAddress)
