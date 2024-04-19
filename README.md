@@ -12,4 +12,4 @@ The Parser contains:
 There are three rest endpoints that allow the use of this parser.
 For simplicity, I have used rest endpoints, which could be pinged by the notification service to check for new transactions.
 
-Alternately, the parser could be modified and a queue or a websocket could be added where it emits events of new transactions so the notification service can use it.
+Alternately, the parser could be modified and a queue or a websocket or external webhook could be added where it emits events of new transactions so the notification service can use it.
