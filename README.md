@@ -1,5 +1,12 @@
 For this task here are some details:
 
+The code has 4 key components;
+1. The Parser
+2. The observer (its the FetchLatestTransactions() function in the parser), which runs as a goroutine in main
+3. The rest api interface for external use - this is for simplicity. ideally we could use a queue/websocket/external webhook to send events to the notifcation service
+4. Helper functions to make calls to the JSONRPC address
+
+
 The Parser contains:
 - an in memory list of subscribed addresses
 - an in memory list of transactions that have already been fetched
